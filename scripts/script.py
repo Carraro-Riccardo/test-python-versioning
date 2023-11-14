@@ -14,6 +14,10 @@ file_path  = sys.argv[1]
 file_name   = sys.argv[2]
 str_version = sys.argv[3]
 
+print(file_path)
+print(file_name)
+print(str_version)
+
 file_name_only = file_name[:-4]
 
 version_components = str_version.split('.')
