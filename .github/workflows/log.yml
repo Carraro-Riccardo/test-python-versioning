@@ -54,7 +54,7 @@ jobs:
       - name: python script
         run: |
           dir -l
-          cp .github/script.py ../
+          cp ./script/script.py ./
           python script.py
     
       
