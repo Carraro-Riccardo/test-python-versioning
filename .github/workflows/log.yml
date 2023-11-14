@@ -49,6 +49,6 @@ jobs:
       - name: python script
         run: |
           dir -l
-          
+          cp .github/change_viewer.py ../
     
       
