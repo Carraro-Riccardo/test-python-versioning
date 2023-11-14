@@ -55,6 +55,6 @@ jobs:
         run: |
           dir -l
           cp ./scripts/script.py ./
-          python script.py
+          python script.py  ${{ steps.path.outputs.FILE_PATH }}"/${{ steps.name.outputs.FILE_NAME }}"
     
       
