@@ -32,8 +32,8 @@ print(file_path+"/"+file_name+".typ")
 with open(file_path+"/"+file_name+".typ") as file:
     new_file_content = file.read()
 
-print("./tmp"+file_path[2:]+"/"+file_name+".typ")
-with open("./tmp"+file_path[2:]+"/"+file_name+".typ") as file:
+print("./tmp/"+file_path+"/"+file_name+".typ")
+with open("./tmp/"+file_path+"/"+file_name+".typ") as file:
     old_file_content = file.read()
 
 def diff_letters(first, second,x,y,z):
