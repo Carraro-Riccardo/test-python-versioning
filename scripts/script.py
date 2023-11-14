@@ -46,3 +46,6 @@ def diff_letters(first, second,x,y,z):
 new_version = diff_letters(old_file_content, new_file_content,x,y,z)
 
 print("vecchia versione:\t" + str_version + "\nnuova versione:\t\t" + new_version)
+
+with open("version.txt", "w") as file:
+    file.write(new_version)
