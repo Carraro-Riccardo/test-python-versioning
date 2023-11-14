@@ -56,5 +56,5 @@ jobs:
           dir -l
           cp ./scripts/script.py ./
           python script.py  "${{ needs.common.outputs.FILE_PATH }}" "${{ needs.common.outputs.FILE_NAME }}" ${{vars.PROVA_VERSION}}
-    
+          echo "PROVA_VERSIONE=$(cat version.txt)"
       
