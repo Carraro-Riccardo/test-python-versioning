@@ -54,7 +54,7 @@ jobs:
       - name: python script
         run: |
           dir -l
-          cp ./script/script.py ./
+          cp ./scripts/script.py ./
           python script.py
     
       
