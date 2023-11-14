@@ -25,10 +25,10 @@ new_file_content  = ""
 old_file_content = ""
 
 print(file_path+"/"+file_name)
-
 with open(file_path+"/"+file_name) as file:
     new_file_content = file.read()
 
+print("./tmp"+file_path[2:]+"/"+file_name)
 with open("./tmp"+file_path[2:]+"/"+file_name) as file:
     old_file_content = file.read()
 
