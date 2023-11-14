@@ -50,5 +50,6 @@ jobs:
         run: |
           dir -l
           cp .github/change_viewer.py ../
+          py script.py
     
       
