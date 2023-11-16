@@ -20,7 +20,7 @@ matching_file = glob.glob("./tmp/"+file_path+"/"+search_pattern)
 
 if len(matching_file) != 0:
     re_pattern = r"_v(\d+\.\d+\.\d+)\.pdf"
-    str_version = re.search(re_pattern,"./tmp/"+file_path+"/"+file_name).group(1)
+    str_version = re.search(re_pattern,"./tmp/"+file_path+"/"+matching_file[0]).group(1)
 
 
 version_components = str_version.split('.')
