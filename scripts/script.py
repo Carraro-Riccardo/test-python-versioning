@@ -24,10 +24,10 @@ z = int(version_components[2])
 new_file_content  = ""
 old_file_content = ""
 
-with open(file_path+"/"+file_name) as file:
+with open(file_path+"/"+file_name+".typ") as file:
     new_file_content = file.read()
 
-with open("./tmp/"+file_path+"/"+file_name) as file:
+with open("./tmp/"+file_path+"/"+file_name+".typ") as file:
     old_file_content = file.read()
 
 def diff_letters(first, second,x,y,z):
