@@ -53,6 +53,8 @@ jobs:
     
       - name: python script
         run: |
+          dir -l -a
+          ls .github/
           cp ./scripts/script.py ./
           output=$(python script.py  "${{ needs.common.outputs.FILE_PATH }}" "${{ needs.common.outputs.FILE_NAME }}")
           echo "::notice::update version: $output"
