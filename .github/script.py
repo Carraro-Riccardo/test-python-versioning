@@ -16,10 +16,12 @@ str_version = "1.0.0"
 search_pattern = f"{file_name}*.pdf"
 matching_file = glob.glob("./tmp/"+file_path+"/"+search_pattern)
 
-if len(matching_file) != 0:
-    re_pattern = r"_v(\d+\.\d+\.\d+)\.pdf"
-    str_version = re.search(re_pattern,"./tmp/"+file_path+"/"+matching_file[0]).group(1)
+re_pattern = r"_v(\d+\.\d+\.\d+)\.pdf"
+match = re.search(re_pattern,"./tmp/"+file_path+"/"+matching_file[0])
 
+if match:
+    str_version = match.group(1)
+    
     version_components = str_version.split('.')
     x = int(version_components[0])
     y = int(version_components[1])
