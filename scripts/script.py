@@ -24,8 +24,6 @@ z = int(version_components[2])
 new_file_content  = ""
 old_file_content = ""
 
-print(file_path+"/"+file_name)
-
 with open(file_path+"/"+file_name) as file:
     new_file_content = file.read()
 
