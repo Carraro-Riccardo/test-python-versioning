@@ -55,8 +55,8 @@ jobs:
         run: |
           dir -l
           cp ./scripts/script.py ./
-          echo "${{ steps.path.outputs.FILE_PATH }}"
-          echo "${{ steps.name.outputs.FILE_NAME }}"
-          output=$(python script.py  "${{ steps.path.outputs.FILE_PATH }}" "${{ steps.name.outputs.FILE_NAME }}" "1.0.0")
+          echo "${{ needs.common.outputs.FILE_PATH }}"
+          echo "${{ needs.common.outputs.FILE_NAME }}"
+          output=$(python script.py  "${{ needs.common.outputs.FILE_PATH }}" "${{ needs.common.outputs.FILE_NAME }}" "1.0.0")
           echo "ecco il risultato del file: $output"
       
