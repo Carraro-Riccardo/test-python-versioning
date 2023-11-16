@@ -53,10 +53,7 @@ jobs:
     
       - name: python script
         run: |
-          dir -l
           cp ./scripts/script.py ./
-          echo "${{ needs.common.outputs.FILE_PATH }}"
-          echo "${{ needs.common.outputs.FILE_NAME }}"
-          output=$(python script.py  "${{ needs.common.outputs.FILE_PATH }}" "${{ needs.common.outputs.FILE_NAME }}" "1.0.0")
-          echo "ecco il risultato del file: $output"
+          output=$(python script.py  "${{ needs.common.outputs.FILE_PATH }}" "${{ needs.common.outputs.FILE_NAME }}")
+          echo "::notice::update version: $output"
       
