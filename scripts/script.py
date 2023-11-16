@@ -9,12 +9,19 @@ target_directory = "./tmp"
 branch_name = "main"
 subprocess.run(["git", "clone", "--branch",  branch_name, repo_url, target_directory,  "--quiet"], check=True)
 
-
 file_path  = sys.argv[1]
 file_name   = sys.argv[2]
-str_version = sys.argv[3]
+str_version = "1.0.0"
 
 file_name_only = file_name[:-4]
+
+search_pattern = f"{file_name}*.pdf"
+matching_file = glob.glob("./tmp/"+file_path+"/"+search_pattern)
+
+if len(matching_file) != 0:
+    re_pattern = r"_v(\d+\.\d+\.\d+)\.pdf"
+    str_version = re.search(re_pattern,"./tmp/"+file_path+"/"+file_name).group(1)
+
 
 version_components = str_version.split('.')
 x = int(version_components[0])
