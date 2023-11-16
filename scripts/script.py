@@ -39,6 +39,7 @@ if len(matching_file) != 0:
             z = z + 1
         if first.count("=") < second.count("="):
             y = y + 1
+            z = 0
         return str(x) + "." + str(y) + "." + str(z)
 
     new_version = diff_letters(old_file_content, new_file_content,x,y,z)
