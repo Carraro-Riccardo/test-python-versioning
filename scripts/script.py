@@ -7,7 +7,7 @@ import subprocess
 repo_url = "https://github.com/Carraro-Riccardo/test-python-versioning"
 target_directory = "./tmp"
 branch_name = "main"
-subprocess.run(["git", "clone", "--branch", branch_name, repo_url, target_directory], check=True)
+subprocess.run(["git", "clone", "--branch",  branch_name, repo_url, target_directory,  "--quiet"], check=True)
 
 
 file_path  = sys.argv[1]
@@ -41,4 +41,4 @@ def diff_letters(first, second,x,y,z):
 
 new_version = diff_letters(old_file_content, new_file_content,x,y,z)
 
-print("vecchia versione:\t" + str_version + "\nnuova versione:\t\t" + new_version)
+print(new_version)
